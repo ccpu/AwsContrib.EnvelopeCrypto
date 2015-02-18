@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsContrib.EnvelopeCrypto",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsContrib.EnvelopeCryptoTests", "AwsContrib.EnvelopeCryptoTests\AwsContrib.EnvelopeCryptoTests.csproj", "{4B86831F-C2C7-4841-840C-AE2370D20FDE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{65FCB93A-96C8-4CC6-A1F3-D2D704103AA6}"
+	ProjectSection(SolutionItems) = preProject
+		AwsContrib.EnvelopeCrypto.nuspec = AwsContrib.EnvelopeCrypto.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

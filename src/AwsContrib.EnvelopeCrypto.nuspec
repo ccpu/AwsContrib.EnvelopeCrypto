@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>AwsContrib.EnvelopeCrypto</id>
+        <version>0.0.1</version>
+        <authors>Philip Garrett</authors>
+        <projectUrl>https://stash.icainformatics.com/projects/MISC/repos/awscontrib.envelopecrypto/browse</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Envelope encryption using AWS KMS.</description>
+        <summary>A library for using AWS KMS (Key Management Service) to do envelope cryptography. This allows you to encrypt large payloads without exposing your secrets to Amazon or transferring large objects over t</summary>
+        <copyright>Copyright 2015 by ICA. All rights reserved.</copyright>
+        <dependencies>
+            <dependency id="AWSSDK" version="[2.3.0.0,3.0.0.0)" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="AwsContrib.EnvelopeCrypto\bin\Debug\AwsContrib.EnvelopeCrypto.dll" target="lib\net45\AwsContrib.EnvelopeCrypto.dll" />
+    </files>
+</package>
