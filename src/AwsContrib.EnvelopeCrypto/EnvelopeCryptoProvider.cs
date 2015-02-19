@@ -5,6 +5,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
+using Amazon.KeyManagementService;
+
 using AwsContrib.EnvelopeCrypto.Internal;
 
 namespace AwsContrib.EnvelopeCrypto
@@ -27,6 +29,9 @@ namespace AwsContrib.EnvelopeCrypto
 			_config = config;
 			_algorithmFactory = algorithmFactory;
 		}
+
+		public EnvelopeCryptoProvider(IAmazonKeyManagementService keyService, string keyId)
+			: this(new KmsDataKeyProvider(keyService,keyId)) {}
 
 		public EnvelopeCryptoProvider(IDataKeyProvider dataKeyProvider)
 			: this(dataKeyProvider, new DefaultEnvelopeCryptoConfig(), new DefaultAlgorithmFactory()) {}

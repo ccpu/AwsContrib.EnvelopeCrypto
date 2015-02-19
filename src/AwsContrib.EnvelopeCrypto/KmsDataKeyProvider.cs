@@ -83,7 +83,12 @@ namespace AwsContrib.EnvelopeCrypto
 
 		private static Dictionary<string, string> AsDictionary(IDictionary<string, string> self)
 		{
-			return self as Dictionary<string, string> ?? new Dictionary<string, string>(self);
+			var dict = self as Dictionary<string, string>;
+			if (self == null || dict == null)
+			{
+				return new Dictionary<string, string>();
+			}
+			return dict;
 		}
 	}
 }
