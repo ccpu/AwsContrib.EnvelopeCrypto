@@ -21,7 +21,7 @@
 )
 
 $dir = pwd
-$filename = "$($dir)\bin\Debug\AwsContrib.EnvelopeCrypto.IntegrationTests.dll.config"
+$filename = "$($dir)\bin\Release\AwsContrib.EnvelopeCrypto.IntegrationTests.dll.config"
 
 $config = [xml](Get-Content $filename)
 
