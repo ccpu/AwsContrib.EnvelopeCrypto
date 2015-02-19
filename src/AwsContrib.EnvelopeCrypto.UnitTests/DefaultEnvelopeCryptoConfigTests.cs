@@ -5,7 +5,7 @@ using FluentAssertions;
 
 using NUnit.Framework;
 
-namespace AwsContrib.EnvelopeCryptoTests
+namespace AwsContrib.EnvelopeCrypto.UnitTests
 {
 	public class DefaultEnvelopeCryptoConfigTests
 	{

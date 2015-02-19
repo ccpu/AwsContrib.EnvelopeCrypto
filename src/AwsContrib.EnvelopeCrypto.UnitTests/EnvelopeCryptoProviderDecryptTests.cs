@@ -13,7 +13,7 @@ using NUnit.Framework;
 
 // ReSharper disable ReturnValueOfPureMethodIsNotUsed
 
-namespace AwsContrib.EnvelopeCryptoTests
+namespace AwsContrib.EnvelopeCrypto.UnitTests
 {
 	public class EnvelopeCryptoProviderDecryptTests : EnvelopeCryptoProviderTestsBase
 	{

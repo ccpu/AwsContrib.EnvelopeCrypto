@@ -7,8 +7,8 @@
     <ProjectGuid>{4B86831F-C2C7-4841-840C-AE2370D20FDE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AwsContrib.EnvelopeCryptoTests</RootNamespace>
-    <AssemblyName>AwsContrib.EnvelopeCryptoTests</AssemblyName>
+    <RootNamespace>AwsContrib.EnvelopeCrypto.UnitTests</RootNamespace>
+    <AssemblyName>AwsContrib.EnvelopeCrypto.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

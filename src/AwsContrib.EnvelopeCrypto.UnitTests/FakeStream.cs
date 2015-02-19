@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace AwsContrib.EnvelopeCryptoTests
+namespace AwsContrib.EnvelopeCrypto.UnitTests
 {
 	internal class FakeStream : Stream
 	{

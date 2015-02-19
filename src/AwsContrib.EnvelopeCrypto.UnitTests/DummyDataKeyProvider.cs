@@ -4,7 +4,7 @@ using System.Linq;
 
 using AwsContrib.EnvelopeCrypto;
 
-namespace AwsContrib.EnvelopeCryptoTests
+namespace AwsContrib.EnvelopeCrypto.UnitTests
 {
 	public class DummyDataKeyProvider : IDataKeyProvider
 	{
