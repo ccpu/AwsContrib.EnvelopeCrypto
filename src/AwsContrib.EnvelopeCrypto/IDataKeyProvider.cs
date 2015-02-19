@@ -4,9 +4,9 @@ namespace AwsContrib.EnvelopeCrypto
 {
 	public interface IDataKeyProvider
 	{
-		void GenerateKey(out byte[] key, out byte[] encryptedKey);
+		void GenerateKey(int keyBits, out byte[] key, out byte[] encryptedKey);
 
-		void GenerateKey(out byte[] key, out byte[] encryptedKey, IDictionary<string, string> context);
+		void GenerateKey(int keyBits, out byte[] key, out byte[] encryptedKey, IDictionary<string, string> context);
 
 		byte[] EncryptKey(byte[] plainText);
 

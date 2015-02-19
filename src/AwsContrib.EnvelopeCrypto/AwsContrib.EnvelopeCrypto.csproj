@@ -50,6 +50,7 @@
     <Compile Include="IDataKeyProvider.cs" />
     <Compile Include="IEnvelopeCryptoConfig.cs" />
     <Compile Include="Internal\ISymmetricAlgorithm.cs" />
+    <Compile Include="KmsDataKeyProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Internal\StreamWithDisposables.cs" />
     <Compile Include="Internal\SymmetricAlgorithmWrapper.cs" />

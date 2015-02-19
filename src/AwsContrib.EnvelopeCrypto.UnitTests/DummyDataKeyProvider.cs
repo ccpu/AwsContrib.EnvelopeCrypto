@@ -19,17 +19,17 @@ namespace AwsContrib.EnvelopeCrypto.UnitTests
 
 		public virtual Dictionary<string, byte[]> EncryptedKeyById { get; set; }
 
-		public virtual void GenerateKey(out byte[] key, out byte[] encryptedKey)
+		public virtual void GenerateKey(int keyBits, out byte[] key, out byte[] encryptedKey)
 		{
 			key = GeneratedKey;
 			encryptedKey = GeneratedEncryptedKey;
 		}
 
-		public virtual void GenerateKey(out byte[] key, out byte[] encryptedKey, IDictionary<string, string> context)
+		public virtual void GenerateKey(int keyBits, out byte[] key, out byte[] encryptedKey, IDictionary<string, string> context)
 		{
 			if (context == null)
 			{
-				GenerateKey(out key, out encryptedKey);
+				GenerateKey(keyBits, out key, out encryptedKey);
 				return;
 			}
 

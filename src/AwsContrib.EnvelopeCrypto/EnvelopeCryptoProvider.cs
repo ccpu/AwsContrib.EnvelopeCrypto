@@ -82,7 +82,7 @@ namespace AwsContrib.EnvelopeCrypto
 		public Stream Encrypt(out byte[] dataKey, Stream plaintextStream, IDictionary<string, string> context)
 		{
 			byte[] plaintextKey;
-			_dataKeyProvider.GenerateKey(out plaintextKey, out dataKey, context);
+			_dataKeyProvider.GenerateKey(_config.KeyBits, out plaintextKey, out dataKey, context);
 
 			ISymmetricAlgorithm algo = null;
 			try
@@ -123,7 +123,7 @@ namespace AwsContrib.EnvelopeCrypto
 		public IEnumerable<byte[]> Encrypt(out byte[] dataKey, IEnumerable<byte[]> plaintextBlobs, IDictionary<string, string> context)
 		{
 			byte[] plaintextKey;
-			_dataKeyProvider.GenerateKey(out plaintextKey, out dataKey, context);
+			_dataKeyProvider.GenerateKey(_config.KeyBits, out plaintextKey, out dataKey, context);
 
 			using (ISymmetricAlgorithm algo = _algorithmFactory.CreateAlgorithm(_config))
 			{
