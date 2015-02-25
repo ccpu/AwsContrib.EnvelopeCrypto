@@ -24,6 +24,7 @@ Next, create a KMS client and use it to create an EnvelopeCryptoProvider.
 	var crypto = new EnvelopeCryptoProvider(client, "alias/MyKeyAlias");
 
 To encrypt data, use one of the Encrypt() overloads.	
+
 	string dataKey;
 	string encrypted = crypto.Encrypt(out dataKey, "s3cr3t!");
 
