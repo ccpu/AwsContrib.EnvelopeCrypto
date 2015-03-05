@@ -10,7 +10,7 @@
         <summary>A library for using AWS KMS (Key Management Service) to do envelope cryptography. This allows you to encrypt large payloads without exposing your secrets to Amazon or transferring large objects over t</summary>
         <copyright>Copyright 2015 by ICA. All rights reserved.</copyright>
         <dependencies>
-            <dependency id="AWSSDK" version="[2.3.0.0,3.0.0.0)" />
+            <dependency id="AWSSDK" version="[2.3.21.1,3.0.0.0)" />
         </dependencies>
     </metadata>
     <files>
