@@ -38,6 +38,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CachingDataKeyProvider.cs" />
     <Compile Include="Internal\AlgorithmFactoryExtensions.cs" />
     <Compile Include="Internal\ConcatenatedStream.cs" />
     <Compile Include="Internal\CryptoConfig.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="IDataKeyProvider.cs" />
     <Compile Include="IEnvelopeCryptoConfig.cs" />
     <Compile Include="Internal\ISymmetricAlgorithm.cs" />
+    <Compile Include="Internal\LruCache.cs" />
     <Compile Include="KmsDataKeyProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Internal\StreamWithDisposables.cs" />

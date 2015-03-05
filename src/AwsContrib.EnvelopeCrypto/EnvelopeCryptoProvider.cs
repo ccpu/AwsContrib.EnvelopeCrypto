@@ -30,8 +30,16 @@ namespace AwsContrib.EnvelopeCrypto
 			_algorithmFactory = algorithmFactory;
 		}
 
+		/// <param name="keyService">An Amazon KMS service client</param>
+		/// <param name="keyId">The id or alias of the KMS master key to use</param>
 		public EnvelopeCryptoProvider(IAmazonKeyManagementService keyService, string keyId)
-			: this(new KmsDataKeyProvider(keyService,keyId)) {}
+			: this(new KmsDataKeyProvider(keyService, keyId)) {}
+
+		/// <param name="keyService">An Amazon KMS service client</param>
+		/// <param name="keyId">The id or alias of the KMS master key to use</param>
+		/// <param name="cacheSize">The number of decrypted keys to cache in RAM</param>
+		public EnvelopeCryptoProvider(IAmazonKeyManagementService keyService, string keyId, int cacheSize)
+			: this(new CachingDataKeyProvider(new KmsDataKeyProvider(keyService, keyId), cacheSize)) {}
 
 		public EnvelopeCryptoProvider(IDataKeyProvider dataKeyProvider)
 			: this(dataKeyProvider, new DefaultEnvelopeCryptoConfig(), new DefaultAlgorithmFactory()) {}

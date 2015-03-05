@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CachingDataKeyProviderTests.cs" />
     <Compile Include="DefaultEnvelopeCryptoConfigTests.cs" />
     <Compile Include="DummyDataKeyProvider.cs" />
     <Compile Include="EnvelopeCryptoProviderDecryptTests.cs" />

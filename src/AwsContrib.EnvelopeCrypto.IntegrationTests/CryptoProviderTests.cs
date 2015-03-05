@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
+
+using Amazon;
+using Amazon.KeyManagementService;
 
 using FluentAssertions;
 
@@ -17,8 +15,10 @@ namespace AwsContrib.EnvelopeCrypto.IntegrationTests
 		public void RoundTrip_Ok()
 		{
 			// Depends on client being configured in app.config or ambient environment.
-			var client = Amazon.AWSClientFactory.CreateAmazonKeyManagementServiceClient();
-			ICryptoProvider crypto = new EnvelopeCryptoProvider(client, ConfigurationManager.AppSettings["kmsKeyId"]);
+			IAmazonKeyManagementService client = AWSClientFactory.CreateAmazonKeyManagementServiceClient();
+
+			string keyid = ConfigurationManager.AppSettings["kmsKeyId"];
+			ICryptoProvider crypto = new EnvelopeCryptoProvider(client, keyid);
 
 			const string plaintext = "Peek-a-boo!";
 			string dataKey;

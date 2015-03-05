@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using AwsContrib.EnvelopeCrypto;
-
 namespace AwsContrib.EnvelopeCrypto.UnitTests
 {
 	public class DummyDataKeyProvider : IDataKeyProvider
